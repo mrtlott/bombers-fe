@@ -1,6 +1,6 @@
-import React, { useEffect, useState } from 'react';
-import PlayerCard from '../components/PlayersCard'; // Make sure this path is correct
-import './Roster.css';
+import React, { useEffect, useState } from "react";
+import PlayerCard from "../components/PlayersCard"; // Make sure this path is correct
+import "./Roster.css";
 
 const Roster = () => {
   const [players, setPlayers] = useState([]);
@@ -14,9 +14,9 @@ const Roster = () => {
   }, []);
 
   return (
-    <div className='roster-container' style={{ padding: '2rem' }}>
+    <div className="roster-container" style={{ padding: "2rem" }}>
       <h1>Team Roster</h1>
-      <div style={{ display: 'flex', flexWrap: 'wrap', gap: '1rem' }}>
+      <div style={{ display: "flex", flexWrap: "wrap", gap: "1rem" }}>
         {players.map((player) => (
           <PlayerCard key={player.id} player={player} />
         ))}
