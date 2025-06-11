@@ -1,7 +1,9 @@
 .photo{
-    height: 550px;
-    width: 376px;
+    height: 200px;
+    width: 250px;
     transform: rotate(90deg);
+    padding: 75px; 
+    background-color: black;
 }
 
 .photo.rotated {

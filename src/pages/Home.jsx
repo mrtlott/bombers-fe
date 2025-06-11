@@ -47,6 +47,8 @@ import './Home.css'; // optional styling file
 import Logo from '../public/bomberslogo.png';
 import styles from './Roster.css';
 
+
+
 const Home = () => {
   return (
     <div className="home-container">
@@ -78,11 +80,80 @@ const Home = () => {
             alt="Team Photo"
             className="team-photo"
           />
+
+
+
+
+
+
+          
+        </Link>
+        <Link to="https://liffl.com">
+          <p>League Website</p>
         </Link>
       </section>
     </div>
+
+
+
+  );
+
+
+
+
+const generateFootballs = (count) => {
+  return Array.from({ length: count }, (_, i) => {
+    const left = Math.random() * 100;
+    const delay = Math.random() * 5;
+    const duration = 3 + Math.random() * 2;
+    return (
+      <img
+        key={i}
+        src="/football.png"
+        alt=""
+        className="football"
+        style={{
+          left: `${left}%`,
+          animationDelay: `${delay}s`,
+          animationDuration: `${duration}s`,
+        }}
+      />
+    );
+  });
+};
+
+const Home = () => {
+  return (
+    <div className="home-container">
+      <div className="football-container">
+        {generateFootballs(20)}
+      </div>
+      <h1 className="home-title">Farmers Bombers</h1>
+      <p className="home-subtitle">Official Team Site</p>
+      <button className="home-button" onClick={() => window.location.href = "/TeamEmails"}>
+        View Team Emails
+      </button>
+    </div>
   );
 };
+
+
+
+
+
+
+
+
+  
+
+
+  
+};
+
+
+
+
+
 
 export default Home;
 
